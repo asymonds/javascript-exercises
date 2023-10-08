@@ -1,9 +1,12 @@
 const removeFromArray = function (arr, ...entries) {
-  let response = arr;
+  let filteredArray = [];
+  arr.forEach((item) => {
+    if (!entries.includes(item)) {
+      filteredArray.push(item);
+    }
+  });
 
-  response = arr.filter((item) => item !== entries);
-  console.log(response);
-  return response;
+  return filteredArray;
 };
 
 // Do not edit below this line
